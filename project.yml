@@ -38,24 +38,13 @@ targets:
         CFBundleDisplayName: GLB Viewer
         NSHumanReadableCopyright: ""
         CFBundleIconName: AppIcon
-        UTExportedTypeDeclarations:
-          - UTTypeIdentifier: org.khronos.gltf-binary
-            UTTypeDescription: glTF Binary
-            UTTypeConformsTo:
-              - public.data
-              - public.content
-            UTTypeTagSpecification:
-              public.filename-extension:
-                - glb
-              public.mime-type:
-                - model/gltf-binary
         CFBundleDocumentTypes:
           - CFBundleTypeName: glTF Binary
             CFBundleTypeRole: Viewer
-            LSHandlerRank: Owner
+            LSHandlerRank: Default
             CFBundleTypeIconFile: DocumentIcon
             LSItemContentTypes:
-              - org.khronos.gltf-binary
+              - org.khronos.glb
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.markglb.GLBViewer
@@ -92,7 +81,7 @@ targets:
           NSExtensionPrincipalClass: "$(PRODUCT_MODULE_NAME).PreviewViewController"
           NSExtensionAttributes:
             QLSupportedContentTypes:
-              - org.khronos.gltf-binary
+              - org.khronos.glb
             QLSupportsSearchableItems: false
     settings:
       base:
@@ -125,7 +114,7 @@ targets:
           NSExtensionPrincipalClass: "$(PRODUCT_MODULE_NAME).ThumbnailProvider"
           NSExtensionAttributes:
             QLSupportedContentTypes:
-              - org.khronos.gltf-binary
+              - org.khronos.glb
             QLSupportsSearchableItems: false
     settings:
       base:
