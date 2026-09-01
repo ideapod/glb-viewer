@@ -4,6 +4,7 @@ options:
   deploymentTarget:
     macOS: "14.0"
   createIntermediateGroups: true
+  developmentTeam: 284YFC5252
 
 packages:
   GLTFSceneKit:
@@ -30,11 +31,13 @@ targets:
       properties:
         com.apple.security.app-sandbox: true
         com.apple.security.files.user-selected.read-only: true
+        com.apple.security.files.downloads.read-only: true
     info:
       path: App/Info.plist
       properties:
         CFBundleDisplayName: GLB Viewer
         NSHumanReadableCopyright: ""
+        CFBundleIconName: AppIcon
         UTExportedTypeDeclarations:
           - UTTypeIdentifier: org.khronos.gltf-binary
             UTTypeDescription: glTF Binary
@@ -50,6 +53,7 @@ targets:
           - CFBundleTypeName: glTF Binary
             CFBundleTypeRole: Viewer
             LSHandlerRank: Owner
+            CFBundleTypeIconFile: DocumentIcon
             LSItemContentTypes:
               - org.khronos.gltf-binary
     settings:
@@ -59,6 +63,7 @@ targets:
         CURRENT_PROJECT_VERSION: "1"
         GENERATE_INFOPLIST_FILE: NO
         CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 284YFC5252
         ENABLE_HARDENED_RUNTIME: YES
         SWIFT_VERSION: "5.0"
     dependencies:
@@ -95,6 +100,7 @@ targets:
         GENERATE_INFOPLIST_FILE: NO
         SKIP_INSTALL: YES
         CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 284YFC5252
         ENABLE_HARDENED_RUNTIME: YES
         SWIFT_VERSION: "5.0"
     dependencies:
@@ -127,6 +133,7 @@ targets:
         GENERATE_INFOPLIST_FILE: NO
         SKIP_INSTALL: YES
         CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: 284YFC5252
         ENABLE_HARDENED_RUNTIME: YES
         SWIFT_VERSION: "5.0"
     dependencies:

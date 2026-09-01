@@ -37,6 +37,11 @@ enum GLBLoader {
         guard !scene.rootNode.childNodes.isEmpty else {
             throw GLBLoadError.emptyScene
         }
+
+        // Works around a GLTFSceneKit/Metal shader incompatibility with byte-encoded vertex
+        // colors (COLOR_0) on material-less meshes. See VertexColorFix.swift.
+        VertexColorFix.apply(to: scene)
+
         return scene
     }
 }
